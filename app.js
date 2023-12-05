@@ -9,8 +9,8 @@ import mongoose from "mongoose";
 // mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
 import session from "express-session";
 console.log(process.env.DB_CONNECTION_STRING);
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/kanbas';
-mongoose.connect(CONNECTION_STRING);
+// const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/kanbas';
+mongoose.connect("mongodb+srv://lichengyi:lcy810@cluster0.fbudpz5.mongodb.net/kanbas?retryWrites=true&w=majority");
 const app = express();
 app.use(
     cors({
